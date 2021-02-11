@@ -23,6 +23,7 @@ const TemplateWrapper = ({ children }) => {
             }
           }
           datoCmsHome {
+            locale
             seoMetaTags {
               ...GatsbyDatoCmsSeoMetaTags
             }
@@ -66,7 +67,13 @@ const TemplateWrapper = ({ children }) => {
                   <Link to="/">Home</Link>
                 </li>
                 <li>
+                  <Link to="/es">Home Spanish</Link>
+                </li>
+                <li>
                   <Link to="/about">About</Link>
+                </li>
+                <li>
+                  <Link to="/es/about">About Spanish</Link>
                 </li>
               </ul>
               <p className="sidebar__social">

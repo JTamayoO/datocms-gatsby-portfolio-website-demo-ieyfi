@@ -28,8 +28,8 @@ const About = ({ data: { about } }) => (
 export default About
 
 export const query = graphql`
-  query AboutQuery {
-    about: datoCmsAboutPage(locale: {eq: "es"}) {
+  query AboutQuery($locale: String!) {
+    about: datoCmsAboutPage(locale: { eq: $locale }) {
       seoMetaTags {
         ...GatsbyDatoCmsSeoMetaTags
       }
